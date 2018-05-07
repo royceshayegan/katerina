@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+// @import 'scss/main';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #fff;
+}
+
+.owl-dots {
+    margin-top: 24px;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    background-color: #666;
+    border-radius: 50%;
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #9e9e9e;
+    }
+}

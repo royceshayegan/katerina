@@ -1,0 +1,11 @@
+<div *ngIf="pageData.pageType === 'home'">
+  <cp-topbar></cp-topbar>
+  <router-outlet></router-outlet>
+  <cp-footer></cp-footer>
+</div>
+
+<div *ngIf="pageData.pageType === 'page'" class="page-container">
+  <cp-topbar></cp-topbar>
+  <router-outlet></router-outlet>
+  <cp-footer></cp-footer>
+</div>
