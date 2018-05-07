@@ -18,6 +18,9 @@ import { TestimonialsComponent } from './page/testimonials/testimonials.componen
 import { ContactComponent } from './page/contact/contact.component';
 import { ProgramsComponent } from './page/programs/programs.component';
 
+// Owl Carousel
+import { OwlModule } from 'ngx-owl-carousel';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +35,7 @@ import { ProgramsComponent } from './page/programs/programs.component';
   ],
   imports: [
     BrowserModule,
+    OwlModule,
     // BrowserAnimationsModule,
     // MatButtonModule,
     AppRoutingModule,

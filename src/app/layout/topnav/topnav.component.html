@@ -1,3 +1,37 @@
-<p>
-  topnav works!
-</p>
+<div class="topnav-row">
+  <div class="left">
+    <div class="logo">
+      <a routerLink="/">
+        <img src="/assets/katerinalogo.png" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="right">
+    <div class="topnav-nodes">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/programs" routerLinkActive="active">Programs</a>
+      <a routerLink="/testimonials" routerLinkActive="active">Client Results</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </div>
+    <div class="mobile">
+      <div (click)="toggleMenu()" id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div id="mobile-nav" class="mobile-nav">
+      <ng-container *ngIf="router.url =='/'">
+        <a (click)="closeMenu()" class="mobile-link" href="#">Home</a>
+      </ng-container>
+      <ng-container *ngIf="router.url !='/'">
+        <a (click)="closeMenu()" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="mobile-link">Home</a>
+      </ng-container>
+      <a (click)="closeMenu()" routerLink="/about" routerLinkActive="active" class="mobile-link">About</a>
+      <a (click)="closeMenu()" routerLink="/programs" class="mobile-link">Programs</a>
+      <a (click)="closeMenu()" routerLink="/testimonials" routerLinkActive="active" class="mobile-link">Client Results</a>
+      <a (click)="closeMenu()" routerLink="/contact" routerLinkActive="active" class="mobile-link">Contact</a>
+    </div>
+  </div>
+</div>

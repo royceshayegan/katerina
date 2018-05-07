@@ -26,7 +26,7 @@ export class AppComponent {
       .filter((route) => route.outlet === 'primary')
       .mergeMap((route) => route.data)
       .subscribe((event) => {
-        this.titleService.setTitle(`Cheryl Pierce | ${event.title}`);
+        this.titleService.setTitle(`Katerina Satori | ${event.title}`);
         var tag = { name: 'description', content: event['metaDescription'] };
         let attributeSelector : string = 'name="description"';
         this.metaService.removeTag(attributeSelector);

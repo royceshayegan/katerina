@@ -2,14 +2,16 @@
 
 // Buttons
 
-.cp-button {
+.katerina-button.green {
     font-size: 16px;
-    font-family: "Playfair Display SC";
+    text-align: center;
+    font-family: $font-primary;
+    max-width: 300px;
     margin: 1rem 0;
     background-color: transparent;
-    color: #4aa98f;
-    border: 2px solid #4aa98f;
-    padding: 8px 24px;
+    color: $green;
+    border: 2px solid $green;
+    padding: 16px;
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 6px;
@@ -18,16 +20,16 @@
 
     &:hover {
         cursor: pointer;
-        background-color: #4aa98f;
+        background-color: $green;
         color: #fff;
     }
 
     @media only screen and (min-width: $sm) {
-        padding: 8px 80px;
+        padding: 16px;
     }
 }
 
-.cp-button.white {
+.katerina-button.white {
     border: 2px solid #fff;
     color: #fff;
 
@@ -41,7 +43,7 @@
     }
 }
 
-.cp-button.hover-white-bg:hover {
+.katerina-button.hover-white-bg:hover {
     background-color: #fff;
-    color: #4aa98f;
+    color: $green;
 }

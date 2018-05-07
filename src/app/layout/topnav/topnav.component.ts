@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule, Routes, Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-topnav',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopnavComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
+  }
+
+  toggleMenu() {
+    document.getElementById("nav-icon").classList.toggle('open');
+    document.getElementById("mobile-nav").classList.toggle('open');
+  }
+
+  closeMenu() {
+    document.getElementById("nav-icon").classList.remove('open');
+    document.getElementById("mobile-nav").classList.remove('open');
   }
 
 }
